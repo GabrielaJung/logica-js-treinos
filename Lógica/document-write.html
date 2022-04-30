@@ -1,0 +1,51 @@
+<html>
+    <meta charset= "UTF-8">
+
+</html>
+
+
+<script>
+
+        function pulaLinha() {
+
+            document.write ("<br>");
+            document.write ("<br>");
+        }
+    
+        function docw(mensagem) {
+
+            document.write(mensagem);
+            pulaLinha();
+
+        }
+
+        var ano = 2021
+        var idadeEmi = 7;
+        var idadeManu = 10;
+        var idadeGuto = 18;
+        var idadeGui = 23;
+
+
+    docw(" <h1> Este código é como escrever em Html, porém <br> dentro do mundo JavaScript </h1> ");
+
+    docw(" <h3> A idade do Guto é </h3> " + idadeGuto);
+
+    docw("<h3>Portanto, Guto nasceu no ano de:</h3>" + (ano - idadeGuto));
+
+        
+         var media =(idadeEmi + idadeManu + idadeGuto + idadeGui)/4;
+
+
+   
+    docw("<h3> E a média das idades dentre Guto e seus 3 irmãos é: </h3>" + Math.round (media))
+    
+
+        var media =(idadeEmi + idadeManu + idadeGuto + idadeGui);
+    
+    docw("<h3>A soma das idades é </h3>" + media);
+
+
+        alert ("operações matemáticas se faz sem aspas, pois as aspas no html recebem texto, e sem elas, os números são números")
+
+
+</script>

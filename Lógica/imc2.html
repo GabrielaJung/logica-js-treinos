@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function calculaImc(peso, altura){
+
+        return peso / (altura * altura);
+
+}
+    var nome = prompt("Como posso te chamar?");
+    var pesoInformado = prompt(nome + ", qual é o seu peso? (em quilogramas)");
+    var alturaInformada = prompt(nome + ", qual é a sua altura? (em metros)");
+
+    var imc = calculaImc(pesoInformado, alturaInformada);
+    var imcRounded = Math.round((imc + Number.EPSILON) * 100 ) / 100;
+    console.log (imcRounded);
+
+    mostra(nome + ", o seu imc é " + imcRounded  + "kg/m².");
+
+
+    //Obesidade grau II if IMC > 35kg/m². Obesidade grau III/mórbida, if IMC > 40KG/m².
+
+    if(imcRounded > 25){
+
+        mostra("Seu imc está acima do recomendado! Tome cuidado <3");
+
+    }
+
+
+    if(imcRounded >= 30 && imcRounded <= 35){
+
+        mostra("Obesidade grau I.");
+
+    }
+
+    if(imcRounded >= 35 && imcRounded < 40){
+
+        mostra("Obesidade grau II.");
+
+    }
+    
+    if(imcRounded >= 40){
+
+             mostra("Obesidade grau III, ou Obesidade Mórbida.");
+
+    }
+    
+    if(imcRounded <= 18.5){
+
+        mostra("Seu imc está abaixo do recomendado! Tome cuidado <3");
+
+    }
+
+     if(imcRounded <= 16.6){
+
+        mostra("Possível anorexia.")
+
+     }
+
+    if(imcRounded >= 18.6 && imcRounded <= 25){
+
+             mostra("Parabéns! Seu imc está dentro do padrão recomendado! Continue assim :)");
+    }
+
+
+</script>

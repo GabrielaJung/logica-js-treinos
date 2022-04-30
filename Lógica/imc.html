@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+
+
+    function calculaImc(nome, peso, altura){
+        
+        var imc = peso / (altura * altura);
+        return imc;
+    }
+
+var imcGabi = calculaImc( "Gabi é ", 48, 1.59);
+var imcGuto = calculaImc("Guto é ", 73, 1.73);
+var imcMae = calculaImc("Mãe é ", 58, 1.57);
+var somaImcs = imcGabi + imcGuto + imcMae
+
+mostra("O Imc de Gabi é " + Math.round(imcGabi));
+mostra("O Imc de Guto é " + Math.round(imcGuto));
+mostra("O Imc de Mãe é " + Math.round(imcMae));
+mostra("A soma dos Imc's é " + Math.round(somaImcs));
+
+//ou podemos fazer desta forma:
+  function calculaImc(nome, peso, altura){
+        
+      return peso / (altura * altura);
+  }
+
+var imcGabi = calculaImc( "Gabi é ", 48, 1.59);
+var imcGuto = calculaImc("Guto é ", 73, 1.73);
+var imcMae = calculaImc("Mãe é ", 58, 1.57);
+
+mostra("O Imc de Gabi é " + Math.round(imcGabi));
+mostra("O Imc de Guto é " + Math.round(imcGuto));
+mostra("O Imc de Mãe é " + Math.round(imcMae));
+
+
+</script>
+
